@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.login-input {
+  margin: 0 auto;
+  max-width: 300px;
+}
+
+#logOut:hover {
+  cursor: pointer;
+}
+
+#login {
+  margin-top: 15px;
+}
+
+#loginButtonBlock {
+  text-align: center;
+  margin-top: 15px;
+}
