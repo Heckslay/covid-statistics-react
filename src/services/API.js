@@ -13,10 +13,13 @@ const API = {
         this.setJwtConfig();
         return axios.post('http://127.0.0.1:8000/api/auth/login', credentials);
     },
-    async checkToken(jwt) {
+    fetchSummary() {
         this.setJwtConfig();
-        this.jwtConfig.headers.Authorization = 'Bearer ' + jwt;
-        return await axios.post('http://127.0.0.1:8000/api/auth/check', {}, this.jwtConfig);
+        return axios.get('http://127.0.0.1:8000/api/v1/get-summary', this.jwtConfig);
+    },
+    fetchCountryStatistics() {
+        this.setJwtConfig();
+        return axios.get('http://127.0.0.1:8000/api/v1/get-countries', this.jwtConfig);
     }
 };
 
